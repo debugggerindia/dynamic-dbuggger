@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { asset } from '../../assets/assets'
-import './navbar.scss'
+import '../../assets/custom.css'
 
 const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false)
@@ -80,24 +80,32 @@ const Navbar = () => {
         if (currentScroll <= 0) {
             body.classList.remove('scroll-up')
         }
-        if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
+        if (
+            currentScroll > lastScroll &&
+            !body.classList.contains('scroll-down')
+        ) {
             body.classList.remove('scroll-up')
             body.classList.add('scroll-down')
         }
-        if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
+        if (
+            currentScroll < lastScroll &&
+            body.classList.contains('scroll-down')
+        ) {
             body.classList.remove('scroll-down')
             body.classList.add('scroll-up')
         }
         lastScroll = currentScroll
     }
 
-    // mobile - menu - active
     return (
         <>
             <header className="header-area-1 header-sticky">
                 <span className="extra-box-border"></span>
                 <div className="header-wrapper">
-                    <div onClick={() => setMobileMenu(true)} className="menu-bar">
+                    <div
+                        onClick={() => setMobileMenu(true)}
+                        className="menu-bar"
+                    >
                         <a href="#" className="menu-bar-btn">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +120,7 @@ const Navbar = () => {
                                     x2="48.6221"
                                     y2="1.41577"
                                     stroke="#CCDEFF"
-                                    stroke-width="2"
+                                    strokeWidth="2"
                                 ></line>
                                 <line
                                     x1="0.249023"
@@ -120,7 +128,7 @@ const Navbar = () => {
                                     x2="48.6221"
                                     y2="13.9224"
                                     stroke="#CCDEFF"
-                                    stroke-width="2"
+                                    strokeWidth="2"
                                 ></line>
                             </svg>
                         </a>
@@ -134,10 +142,12 @@ const Navbar = () => {
                         <ul>
                             {menus.map((menu, index) => (
                                 <li key={menu.title + index}>
-                                    <Link to={menu.url ? `${menu.url}` : '#'} className="font-size-1-18 transition-1">
+                                    <Link
+                                        to={menu.url || '#'}
+                                        className="font-size-1-18 transition-1"
+                                    >
                                         {menu.title}
 
-                                        {/* Only show dropdown indicator if sub_menus exist */}
                                         {menu.sub_menus?.length > 0 && (
                                             <span>
                                                 <svg
@@ -147,37 +157,28 @@ const Navbar = () => {
                                                     fill="none"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                 >
-                                                    <g clip-path="url(#clip0_1_9793)">
-                                                        <path
-                                                            d="M3.52937 12.868C3.78979 13.2098 4.21271 13.2098 4.47312 12.868L7.80646 8.49298C8.06687 8.15118 8.06687 7.59611 7.80646 7.25431C7.54604 6.91251 7.12312 6.91251 6.86271 7.25431L4.66687 10.1391L4.66687 1.75001C4.66687 1.26603 4.36896 0.875012 4.00021 0.875012C3.63146 0.875012 3.33354 1.26603 3.33354 1.75001L3.33354 10.1391L1.13771 7.25704C0.87729 6.91525 0.454373 6.91525 0.193956 7.25704C-0.0664601 7.59884 -0.0664602 8.15392 0.193956 8.49571L3.52729 12.8707L3.52937 12.868Z"
-                                                            fill="#CCDEFF"
-                                                        />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_1_9793">
-                                                            <rect
-                                                                width="8"
-                                                                height="14"
-                                                                fill="white"
-                                                                transform="translate(8 14) rotate(-180)"
-                                                            />
-                                                        </clipPath>
-                                                    </defs>
+                                                    <path
+                                                        d="M3.52937 12.868C3.78979 13.2098 4.21271 13.2098 4.47312 12.868L7.80646 8.49298C8.06687 8.15118 8.06687 7.59611 7.80646 7.25431C7.54604 6.91251 7.12312 6.91251 6.86271 7.25431L4.66687 10.1391L4.66687 1.75001C4.66687 1.26603 4.36896 0.875012 4.00021 0.875012C3.63146 0.875012 3.33354 1.26603 3.33354 1.75001L3.33354 10.1391L1.13771 7.25704C0.87729 6.91525 0.454373 6.91525 0.193956 7.25704C-0.0664601 7.59884 -0.0664602 8.15392 0.193956 8.49571L3.52729 12.8707L3.52937 12.868Z"
+                                                        fill="#CCDEFF"
+                                                    />
                                                 </svg>
                                             </span>
                                         )}
                                     </Link>
-
-                                    {/* Render submenu only if sub_menus exists */}
                                     {menu.sub_menus?.length > 0 && (
                                         <ul className="submenu submenu-1">
-                                            {menu.sub_menus.map((sub_menu, subIndex) => (
-                                                <li key={subIndex}>
-                                                    <Link to={sub_menu.url} className="font-size-1-18">
-                                                        {sub_menu.title}
-                                                    </Link>
-                                                </li>
-                                            ))}
+                                            {menu.sub_menus.map(
+                                                (sub_menu, subIndex) => (
+                                                    <li key={subIndex}>
+                                                        <Link
+                                                            to={sub_menu.url}
+                                                            className="font-size-1-18"
+                                                        >
+                                                            {sub_menu.title}
+                                                        </Link>
+                                                    </li>
+                                                )
+                                            )}
                                         </ul>
                                     )}
                                 </li>
@@ -185,7 +186,11 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="get-in-touch">
-                        <a href="#" onClick={() => setShowSearch(true)} className="header-search-bar">
+                        <a
+                            href="#"
+                            onClick={() => setShowSearch(true)}
+                            className="header-search-bar"
+                        >
                             <span>
                                 <svg
                                     width="30"
@@ -204,6 +209,104 @@ const Navbar = () => {
                     </div>
                 </div>
             </header>
+            {/* Mobile Navigation */}
+            {/* Mobile Navigation */}
+{mobileMenu && (
+    <div className="mobile-menu">
+        <div className="mobile-menu-header">
+            <div className="logo">
+                <img src={asset.logo_1} alt="Dynamic" />
+            </div>
+            <button className="close-btn" onClick={() => setMobileMenu(false)}>
+                &times;
+            </button>
+        </div>
+        <ul className="mobile-menu-list">
+            {menus.map((menu) => (
+                <li key={menu.key}>
+                    <div
+                        className="menu-item"
+                        onClick={() => {
+                            // Navigate directly if no submenus
+                            if (!menu.sub_menus?.length) {
+                                window.location.href = menu.url; // Direct URL navigation
+                                setMobileMenu(false); // Close the menu after navigation
+                            } else {
+                                // Toggle submenu visibility
+                                setExpendMenu(expendMenu === menu.key ? '' : menu.key);
+                            }
+                        }}
+                    >
+                        <span>{menu.title}</span>
+                        {menu.sub_menus?.length > 0 && (
+                            <button className="expand-btn">
+                                {expendMenu === menu.key ? (
+                                    <span style={{ fontSize: '20px' }}>-</span>
+                                ) : (
+                                    <span style={{ fontSize: '20px' }}>+</span>
+                                )}
+                            </button>
+                        )}
+                    </div>
+                    {expendMenu === menu.key && menu.sub_menus?.length > 0 && (
+                        <ul className="submenu">
+                            {menu.sub_menus.map((sub_menu, subIndex) => (
+                                <li key={subIndex}>
+                                    <a
+                                        href={sub_menu.url}
+                                        onClick={() => setMobileMenu(false)}
+                                    >
+                                        {sub_menu.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </li>
+            ))}
+        </ul>
+        {/* Footer Section */}
+        <div className="mobile-menu-footer">
+            <div className="footer-social-icons">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i className="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i className="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i className="fa-brands fa-vimeo-v"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i className="fa-brands fa-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div className="footer-policy">
+                <a href="#" className="policy-link">
+                    Terms of Use
+                </a>
+                <span>|</span>
+                <a href="#" className="policy-link">
+                    Privacy Policy
+                </a>
+            </div>
+            <p className="footer-copyright">
+                <span>© 2024 </span> website_stock . All Rights Reserved.
+            </p>
+        </div>
+    </div>
+)}
+
         </>
     )
 }
