@@ -290,6 +290,37 @@
   color: #007BFF; /* Optional hover color */
 }
 
+/* -----------------whatsapp widget-------- */
+/* WhatsAppWidget.css */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-widget:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  background: #eceaea;
+  border-radius: 50px;
+}
+
 
 
 /* Mobile Menu Drawer */

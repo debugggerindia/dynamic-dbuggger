@@ -23,7 +23,7 @@ const HomeOne = () => {
             {/* <TeamAwrads /> */}
             <ClientSayHome3 />
             <BlogAreaHomeOne />
-
+            
             <Footer />
         </>
     )

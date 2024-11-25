@@ -4,6 +4,7 @@ import ShopifyServicesGrid from '../components/shopify/shopify-services-layout'
 import ImageTextSection from '../components/shopify/shopify-image-with-text'
 import RichTextSection from '../components/shopify/richtext-section'
 import FAQSection from '../components/shopify/shopify-faqs-section'
+import WhatsAppWidget from '../components/shared/WhatsAppWidget'
 import Footer from '../components/shared/footer'
 import Navbar from '../components/shared/navbar'
 import ShopifyBrandSlider from '../components/shopify/shopify-brand-slider'
@@ -18,6 +19,7 @@ const ShopifyAgency = () => {
             <ImageTextSection />
             <RichTextSection />
             <FAQSection />
+            <WhatsAppWidget />
             {/* <ImageWithTextComponent /> */}
             <Footer />
         </>
