@@ -151,7 +151,7 @@ const ContactSection = () => {
   };
 
   // Logo path fix
-  const logoPath = 'src/assets/images/shopify/shopify-experts-logo.png'; // Ensure the correct path
+  const logoPath = '/src/assets/images/shopify/shopify-experts-logo.png'; // Ensure the correct path
 
   return (
     <section style={styles.section}>
