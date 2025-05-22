@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dbuggger.netlify.app/
+Host: https://www.dbuggger.com/
 
 # Sitemaps
-Sitemap: https://dbuggger.netlify.app/sitemap.xml
+Sitemap: https://www.dbuggger.com/sitemap.xml
