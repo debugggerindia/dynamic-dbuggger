@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ConnectButton from "@/components/connect-button"
+import PricingSection from "@/components/pricingSection"
 
 // Pricing data
 const developmentPlans = [
@@ -188,16 +189,16 @@ const marketingPlans = [
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen p-24 pb-16">
+    <div className="min-h-screen pb-16">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        {/* <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="heading-lg mb-4">Transparent Pricing for Your eCommerce Success</h1>
           <p className="text-lg text-gray-600">
             Choose the plan that best fits your business needs. All plans include dedicated support and expert guidance.
           </p>
-        </div>
+        </div> */}
 
-        <Tabs defaultValue="development" className="w-full max-w-5xl mx-auto">
+        {/* <Tabs defaultValue="development" className="w-full max-w-5xl mx-auto">
           <TabsList className="grid grid-cols-3 mb-8">
             <TabsTrigger value="development">Development</TabsTrigger>
             <TabsTrigger value="design">Design</TabsTrigger>
@@ -406,7 +407,9 @@ export default function PricingPage() {
               </div>
             </div>
           </TabsContent>
-        </Tabs>
+        </Tabs> */}
+
+         <PricingSection />
 
         <div className="mt-16 max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -466,5 +469,7 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
+
+      
   )
 }

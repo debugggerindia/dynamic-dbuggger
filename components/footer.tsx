@@ -108,11 +108,11 @@ const Footer = () => {
                   Portfolio
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/case-studies" className="text-gray-400 hover:text-[#FF2C2C] transition-colors">
                   Case Studies
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/blog" className="text-gray-400 hover:text-[#FF2C2C] transition-colors">
                   Blog

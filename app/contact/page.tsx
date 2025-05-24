@@ -59,7 +59,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen p-24 bg-white pb-16">
+    <div className="min-h-screen pt-6 bg-white pb-16">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="heading-lg mb-4">Get in Touch</h1>

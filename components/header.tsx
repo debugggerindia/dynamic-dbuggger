@@ -129,9 +129,9 @@ const Header = () => {
             Portfolio
           </Link>
 
-          <Link href="/case-studies" className="text-gray-800 hover:text-[#FF2C2C] font-medium transition-colors">
+          {/* <Link href="/case-studies" className="text-gray-800 hover:text-[#FF2C2C] font-medium transition-colors">
             Case Studies
-          </Link>
+          </Link> */}
 
           <Link href="/blog" className="text-gray-800 hover:text-[#FF2C2C] font-medium transition-colors">
             Blog
