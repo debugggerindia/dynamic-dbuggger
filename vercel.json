@@ -1,7 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/lander", "permanent": false }
+    { "source": "/", "destination": "/home", "permanent": false }
   ]
 }
-
-  
