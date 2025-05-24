@@ -193,7 +193,7 @@ export default function Home() {
                 <div className="relative">
                   {/* Video Embed (Autoplay, Loop, Muted, Inline) */}
                   <video
-                    src="./videos/shopify-store.mp4"
+                    src="https://cdn.shopify.com/videos/c/o/v/977bc6ca5839492ca59235041885b3d2.mp4"
                     autoPlay
                     loop
                     muted
@@ -447,7 +447,7 @@ export default function Home() {
               <div className="relative z-10 bg-white p-6 rounded-xl shadow-xl border border-white/20">
                 {/* Video Embed (Autoplay, Loop, Muted, Inline) */}
                   <video
-                    src="./videos/ecommerce-analysis.mp4"
+                    src="https://cdn.shopify.com/videos/c/o/v/9395524c35e24741b8e96752edeb641b.mp4"
                     autoPlay
                     loop
                     muted
