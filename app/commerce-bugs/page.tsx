@@ -9,52 +9,55 @@ import BeforeAfterSlider from "@/components/before-after-slider"
 // Sample data
 const commerceServices = [
   {
-    title: "Shopify Store Setup",
+    title: "Store Setup & Launch",
     description:
-      "Complete Shopify store setup with custom theme implementation, product setup, and payment gateway integration.",
+      "Complete eCommerce store setup with custom design, product listings, and payment integration.",
     icon: <ShoppingCart className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#setup",
+    link: "/services/ecommerce#setup",
   },
   {
     title: "Custom Theme Development",
-    description: "Tailor-made Shopify themes designed to showcase your brand identity and optimize for conversions.",
+    description:
+      "Tailor-made themes designed to match your brand and drive customer engagement and conversions.",
     icon: <Layers className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#theme-development",
+    link: "/services/ecommerce#theme-development",
   },
   {
-    title: "App Integration",
+    title: "Third-Party Integrations",
     description:
-      "Seamless integration of third-party apps and custom functionality to enhance your store's capabilities.",
+      "Seamless integration with essential tools, plugins, and APIs to boost store functionality.",
     icon: <Settings className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#app-integration",
+    link: "/services/ecommerce#app-integration",
   },
   {
     title: "Speed Optimization",
     description:
-      "Performance optimization to ensure your store loads quickly and provides a smooth shopping experience.",
+      "Performance enhancements to ensure fast load times and a smooth shopping experience.",
     icon: <Zap className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#speed-optimization",
+    link: "/services/ecommerce#speed-optimization",
   },
   {
     title: "Mobile Optimization",
     description:
-      "Responsive design and mobile-specific optimizations to provide an excellent experience on all devices.",
+      "Responsive layouts and device-specific tweaks for a seamless experience on all screens.",
     icon: <Smartphone className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#mobile-optimization",
+    link: "/services/ecommerce#mobile-optimization",
   },
   {
-    title: "Liquid Fixes & Customization",
-    description: "Expert Liquid development to fix issues and implement custom functionality for your Shopify store.",
+    title: "Custom Code Solutions",
+    description:
+      "Expert coding support to fix issues or build unique store features and enhancements.",
     icon: <Code className="h-10 w-10 text-green-600" />,
-    link: "/services/shopify#liquid-customization",
+    link: "/services/ecommerce#custom-code",
   },
 ]
 
+
 const beforeAfterExamples = [
   {
-    title: "Fashion Boutique Redesign",
+    title: "Fashion & Apparel Store Redesign",
     description:
-      "Complete redesign of a fashion boutique's Shopify store, focusing on improved product presentation and streamlined checkout.",
+      "Complete redesign of a fashion store featuring clothes, shoes, and accessories for improved shopping flow.",
     improvements: [
       "Conversion rate increased by 35%",
       "Average order value up by 28%",
@@ -64,9 +67,21 @@ const beforeAfterExamples = [
     afterImage: "/placeholder.svg?height=400&width=600&text=After",
   },
   {
-    title: "Electronics Store Optimization",
+    title: "Beauty & Personal Care Upgrade",
     description:
-      "Performance and UX optimization for a high-volume electronics store, focusing on speed and conversion rate optimization.",
+      "UX and performance boost for a skincare and cosmetics store to enhance customer trust and ease of use.",
+    improvements: [
+      "Engagement time boosted by 32%",
+      "Cart value increased by 24%",
+      "Mobile conversion up by 38%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Electronics & Gadgets Optimization",
+    description:
+      "Speed and UX improvements for a store selling smartphones, laptops, and smartwatches to increase sales.",
     improvements: [
       "Page load time reduced by 65%",
       "Cart abandonment rate down by 30%",
@@ -75,37 +90,186 @@ const beforeAfterExamples = [
     beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
     afterImage: "/placeholder.svg?height=400&width=600&text=After",
   },
+  {
+    title: "Home & Kitchen Experience Upgrade",
+    description:
+      "Visual refresh and navigation enhancements for a furniture and cookware store to boost customer retention.",
+    improvements: [
+      "Bounce rate reduced by 36%",
+      "Page speed improved by 48%",
+      "Repeat purchases up by 41%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Health & Wellness Store Redesign",
+    description:
+      "Optimized UX and product presentation for a supplements and fitness gear brand focused on wellness.",
+    improvements: [
+      "Mobile bounce rate dropped 40%",
+      "Sales funnel efficiency up 30%",
+      "Checkout speed improved by 44%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Baby & Kids Shop Upgrade",
+    description:
+      "Enhanced product layout and mobile optimization for a store selling toys, clothes, and baby care products.",
+    improvements: [
+      "Product views increased by 52%",
+      "Cart additions up by 29%",
+      "Time on site grew by 34%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Food & Beverages Store Refresh",
+    description:
+      "Faster checkout and improved visuals for an organic groceries and snacks store to boost order volume.",
+    improvements: [
+      "Checkout time reduced 55%",
+      "Order volume rose by 38%",
+      "User satisfaction rate up 44%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Books & Stationery Shop Redesign",
+    description:
+      "Streamlined navigation and updated UI for a bookstore featuring journals, books, and art supplies.",
+    improvements: [
+      "Page speed improved by 60%",
+      "Cart drop-offs reduced by 27%",
+      "Mobile sales increased by 46%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Pet Supplies Store Optimization",
+    description:
+      "UX enhancements and faster load times for a pet food and grooming accessories store to increase conversions.",
+    improvements: [
+      "Conversion rate up 33%",
+      "Promo sales increased by 40%",
+      "Mobile traffic grew by 37%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Hobby & DIY Store Upgrade",
+    description:
+      "Improved product discovery and checkout process for a craft kits and musical instrument online store.",
+    improvements: [
+      "Subscription signups up 53%",
+      "Page load speed doubled",
+      "Bounce rate fell by 42%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Eco-friendly Product Store Redesign",
+    description:
+      "Optimized layout and product highlights for a store offering reusable items and biodegradable packaging.",
+    improvements: [
+      "Engagement time boosted by 32%",
+      "Cart value increased by 24%",
+      "Mobile conversion up by 38%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Tech Accessories Shop Optimization",
+    description:
+      "Speed and UX improvements for a store selling phone cases, chargers, and earbuds to increase sales.",
+    improvements: [
+      "Page load time reduced by 65%",
+      "Cart abandonment rate down by 30%",
+      "Product page conversion up by 42%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Fitness & Sports Store Redesign",
+    description:
+      "Optimized product filtering and mobile experience for home gym equipment and resistance bands store.",
+    improvements: [
+      "Bounce rate reduced by 36%",
+      "Page speed improved by 48%",
+      "Repeat purchases up by 41%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Digital Products Store Upgrade",
+    description:
+      "UX improvements and fast download options for a store offering ebooks, courses, and printables.",
+    improvements: [
+      "Mobile bounce rate dropped 40%",
+      "Sales funnel efficiency up 30%",
+      "Checkout speed improved by 44%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
+  {
+    title: "Customized Products Store Refresh",
+    description:
+      "Enhanced personalization options and checkout flow for a store offering t-shirts, mugs, and gifts.",
+    improvements: [
+      "Product views increased by 52%",
+      "Cart additions up by 29%",
+      "Time on site grew by 34%",
+    ],
+    beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
+    afterImage: "/placeholder.svg?height=400&width=600&text=After",
+  },
 ]
+
+
 
 const croImprovements = [
   {
     title: "Product Page Optimization",
-    description: "Strategic improvements to product pages that drive higher conversion rates and average order values.",
+    description:
+      "Strategic product page updates to boost conversions and increase order values.",
     features: [
-      "Enhanced product imagery",
-      "Social proof integration",
-      "Optimized product descriptions",
-      "Strategic upsell opportunities",
+      "High-quality product images",
+      "Customer reviews and ratings",
+      "Clear and concise descriptions",
+      "Effective upsell modules",
     ],
   },
   {
     title: "Call-to-Action Optimization",
-    description: "Data-driven CTA design and placement to guide customers through the purchase journey.",
+    description:
+      "Smart CTA placement and design to guide visitors toward making a purchase.",
     features: [
-      "High-contrast button design",
-      "Strategic button placement",
-      "Persuasive button copy",
-      "Mobile-optimized tap targets",
+      "Bold and clear button design",
+      "Ideal button placements",
+      "Conversion-friendly copywriting",
+      "Touch-friendly for mobile users",
     ],
   },
   {
     title: "Checkout Process Refinement",
-    description: "Streamlined checkout process that minimizes friction and abandonment.",
+    description:
+      "Frictionless checkout experiences that reduce drop-offs and improve sales.",
     features: [
-      "One-page checkout implementation",
-      "Progress indicator",
-      "Express payment options",
-      "Abandoned cart recovery",
+      "Single-page checkout flows",
+      "Progress steps and indicators",
+      "Fast payment integrations",
+      "Cart recovery and reminders",
     ],
   },
 ]
@@ -122,10 +286,9 @@ export default function CommerceBugs() {
               <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-medium">
                 CommerceBugs
               </div>
-              <h1 className="heading-xl">Expert Shopify Development for Growing Brands</h1>
+              <h1 className="heading-xl">Expert eCommerce Development for Growing Brands</h1>
               <p className="text-lg md:text-xl opacity-90 max-w-lg">
-                Custom Shopify development solutions that focus on performance, user experience, and conversion
-                optimization.
+                Custom eCommerce development solutions that focus on performance, user experience, and conversion optimization.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <ConnectButton className="bg-white text-green-600 hover:bg-gray-100" />
@@ -159,7 +322,7 @@ export default function CommerceBugs() {
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <h2 className="heading-lg mb-4">Our Development Services</h2>
             <p className="text-lg text-gray-600">
-              Comprehensive Shopify development solutions to help your eCommerce business thrive.
+              Comprehensive eCommerce development solutions to help your eCommerce business thrive.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,7 +400,7 @@ export default function CommerceBugs() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="heading-lg mb-4">Conversion Rate Optimization</h2>
             <p className="text-lg opacity-90">
-              Strategic improvements to your Shopify store that drive higher conversion rates and revenue.
+              Strategic improvements to your eCommerce store that drive higher conversion rates and revenue.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -284,12 +447,12 @@ export default function CommerceBugs() {
             <div className="space-y-6">
               <h2 className="heading-lg">Technical Expertise</h2>
               <p className="text-lg text-gray-600">
-                Our team of Shopify experts has the technical knowledge and experience to tackle even the most complex
+                Our team of eCommerce experts has the technical knowledge and experience to tackle even the most complex
                 eCommerce challenges.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">Shopify Liquid</h3>
+                  <h3 className="font-semibold mb-2">Commerce Template</h3>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "95%" }}></div>
                   </div>
@@ -301,13 +464,13 @@ export default function CommerceBugs() {
                   </div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">Shopify API</h3>
+                  <h3 className="font-semibold mb-2">eCommerce API</h3>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "85%" }}></div>
                   </div>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">Shopify Apps</h3>
+                  <h3 className="font-semibold mb-2">Apps Integrations</h3>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-green-600 h-2.5 rounded-full" style={{ width: "92%" }}></div>
                   </div>
@@ -329,7 +492,7 @@ export default function CommerceBugs() {
       <section className="section-padding bg-gradient-to-r from-green-500 to-emerald-700 text-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-lg mb-6">Ready to Fix and Improve Your Shopify Store?</h2>
+            <h2 className="heading-lg mb-6">Ready to Fix and Improve Your Online Store?</h2>
             <p className="text-lg opacity-90 mb-8">
               Book a consultation with our Shopify experts and discover how we can help you optimize your store for
               better performance and higher conversions.
